@@ -1,0 +1,87 @@
+@import "../devices-breakpoints.scss";
+@import "section-mixin.scss";
+
+.section-three {
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+  width: 100%;
+  padding: 0 1vh;
+
+  @media screen and (min-width: $lg+px) {
+    flex-direction: row;
+    padding: 0;
+    height: 60vh;
+  }
+  &__left-content {
+    @include sectionContent;
+
+    @media screen and (min-width: $lg+px) {
+      width: 30%;
+    }
+  }
+  &__right-content {
+    @include sectionContent;
+  }
+
+  &__left {
+    background-image: url("../../assets/04_koloryzacja.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 35%;
+    margin-bottom: 1vh;
+
+    @media screen and (min-width: $lg+px) {
+      border-right: 10px solid white;
+      height: 100%;
+      margin: 0;
+    }
+    &-header {
+      @include sectionHeader;
+      @media screen and (min-width: $lg+px) {
+        font-size: 4rem;
+      }
+    }
+
+    &-wrapper {
+      @include sectionWrapper;
+
+      @media screen and (min-width: $lg+px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+    }
+    &-line {
+      @include sectionLine;
+    }
+  }
+  &__right {
+    background-image: url("../../assets/05_so_pure.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 65%;
+
+    @media screen and (min-width: $lg+px) {
+      width: 40%;
+      height: 100%;
+      background-size: contain;
+    }
+    &-header {
+      @include sectionHeader;
+      @media screen and (min-width: $lg+px) {
+        font-size: 4rem;
+      }
+    }
+
+    &-wrapper {
+      @include sectionWrapper;
+    }
+    &-line {
+      @include sectionLine;
+      width: 50%;
+    }
+  }
+}

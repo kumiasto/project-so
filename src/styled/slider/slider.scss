@@ -1,0 +1,154 @@
+@import "../devices-breakpoints.scss";
+
+.slider {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &__img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-x: hidden;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0vh;
+    height: 100%;
+    width: 150%;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+
+    &--active {
+      opacity: 1;
+    }
+
+    @media screen and (min-width: $lg+px) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__img-text {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    color: #000;
+    z-index: 99;
+
+    @media screen and (min-width: $lg+px) {
+      top: 35%;
+    }
+  }
+  &__header {
+    position: relative;
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 2vh;
+    padding: 1vh;
+
+    @media screen and (min-width: $lg+px) {
+      font-size: 5rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 8%;
+      height: 100%;
+      border: 1px solid #000;
+      opacity: 0.5;
+      transform: rotate(40deg);
+    }
+  }
+  &__paragraph-one,
+  &__paragraph-two {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.1vh;
+
+    @media screen and (min-width: $lg+px) {
+      font-size: 3rem;
+    }
+  }
+  &__paragraph-three {
+    margin-top: 1vh;
+    letter-spacing: 0.2vh;
+  }
+  &__button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 10vh;
+  }
+  &__button-line {
+    width: 100%;
+    height: 0;
+    margin-right: 3vh;
+    border-top: 1px solid #000;
+  }
+  &__button {
+    padding: 3vh;
+    border-radius: 50px;
+    border: 1px solid #000;
+    background-color: transparent;
+    cursor: pointer;
+    transition: border 0.3s;
+
+    &:hover {
+      border: 1px solid #d4af37;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    top: 75%;
+    left: 35%;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    color: #000;
+
+    @media screen and (min-width: $lg+px) {
+      top: 65%;
+      left: 45%;
+    }
+
+    &-controls {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 10vh;
+      height: 10vh;
+      z-index: 10;
+      width: 20vh;
+      border-bottom: 2px solid #000;
+    }
+    &-circle {
+      width: 1.3vh;
+      height: 1.3vh;
+      border-radius: 50px;
+      color: #fff;
+      background-color: #000;
+      cursor: pointer;
+
+      &--active {
+        padding: 1.3vh;
+      }
+    }
+  }
+}
+
+.white {
+  color: #fff;
+}

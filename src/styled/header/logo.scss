@@ -1,0 +1,17 @@
+@import "../devices-breakpoints.scss";
+
+.logo {
+  display: flex;
+  width: 100%;
+  height: 12vh;
+  margin: 3vh;
+  z-index: 10;
+
+  &__img {
+    filter: invert(0%);
+  }
+}
+
+.white {
+  filter: brightness(0) invert(1);
+}

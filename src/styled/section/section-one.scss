@@ -1,0 +1,102 @@
+@import "../devices-breakpoints.scss";
+@import "section-mixin.scss";
+
+.section-one {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  width: 100%;
+  padding: 1vh;
+  padding-top: 0;
+
+  @media screen and (min-width: $lg+px) {
+    flex-direction: row;
+    border-bottom: 10px solid white;
+    padding: 0;
+  }
+
+  &__content {
+    @include sectionContent;
+
+    @media screen and (min-width: $lg+px) {
+      width: 30%;
+    }
+  }
+
+  &__left {
+    width: 100%;
+    height: 100%;
+
+    @media screen and (min-width: $lg+px) {
+      width: 40%;
+    }
+
+    &-header {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      &::before {
+        content: "";
+        margin-top: 0;
+        top: 12%;
+        left: 40%;
+        position: absolute;
+        height: 45%;
+        border: 1px solid #000;
+        opacity: 0.5;
+        transform: rotate(40deg);
+
+        @media screen and (min-width: $lg+px) {
+          top: 25%;
+          height: 25%;
+          left: 45%;
+        }
+      }
+
+      &__h2 {
+        font-size: 5.5rem;
+        font-weight: 400;
+        letter-spacing: 0.4vh;
+      }
+      &__h3 {
+        font-size: 2.5rem;
+        font-weight: 300;
+        margin-left: 10vh;
+      }
+    }
+  }
+  &__right {
+    width: 60%;
+    height: 100%;
+    background-image: url("../../assets/01_care.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-color: transparent;
+
+    &-header {
+      @include sectionHeader;
+
+      @media screen and (min-width: $lg+px) {
+        font-size: 4rem;
+      }
+    }
+
+    &-wrapper {
+      @include sectionWrapper;
+
+      @media screen and (min-width: $lg+px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+    }
+    &-line {
+      @include sectionLine;
+    }
+  }
+}

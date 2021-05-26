@@ -1,0 +1,136 @@
+@import "../devices-breakpoints.scss";
+
+.burger {
+  padding: 11vh;
+}
+
+.nav {
+  position: fixed;
+  width: 70%;
+  height: 100vh;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  transition: all 0.3s linear;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+
+  @media screen and (min-width: $lg+px) {
+    position: static;
+    transform: translateX(0%);
+    height: 100%;
+    flex-direction: row;
+    background-color: transparent;
+    margin-right: 5vh;
+  }
+
+  &--visible {
+    transform: translateX(0%);
+  }
+
+  &__mobile {
+    z-index: 101;
+
+    @media screen and (min-width: $lg+px) {
+      display: none;
+    }
+  }
+
+  &__ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+    @media screen and (min-width: $lg+px) {
+      flex-direction: row;
+      margin-right: 10vh;
+    }
+  }
+  &__a {
+    display: block;
+    color: #000;
+    letter-spacing: 0.2vh;
+    font-weight: 400;
+    height: 100%;
+    width: 100%;
+    padding: 3vh;
+    white-space: nowrap;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #d4af37;
+    }
+
+    &--arrow {
+      position: relative;
+
+      @media screen and (min-width: $lg+px) {
+        &::before {
+          content: ">";
+          position: absolute;
+          bottom: 0;
+          right: 45%;
+          transform: translate(50%, 50%);
+          transform: rotate(90deg);
+          font-weight: 400;
+        }
+      }
+    }
+    @media screen and (min-width: $lg+px) {
+      color: #000;
+      font-size: 1.1rem;
+    }
+  }
+  &__dropdown {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #1b1b1b;
+    transition: all 0.4s;
+
+    &--active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    &-section-one,
+    &-section-two,
+    &-section-three {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      width: 33%;
+      height: 50%;
+      color: #d4af37;
+      z-index: 5;
+      padding: 3vh;
+      margin-top: 10vh;
+    }
+    &-section-one,
+    &-section-two {
+      border-right: 1px solid #d4af37;
+    }
+    &-section-two {
+      color: #fff;
+    }
+  }
+}
+.white {
+  color: #fff;
+}
