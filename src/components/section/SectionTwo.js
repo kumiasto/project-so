@@ -1,6 +1,6 @@
 import React from "react";
-import "../../styled/section/section-two.scss";
 import { MdKeyboardArrowRight as Right } from "react-icons/md";
+import "../../styled/section/section-two.scss";
 
 const SectionTwo = () => {
   return (

@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
+
+import { ColorContext } from "../../context/ColorContext";
 import "../../styled/header/social-media.scss";
 import twitter from "../../assets/twitter.svg";
 import fb from "../../assets/fb.svg";
 import yt from "../../assets/yt.svg";
 import insta from "../../assets/insta.svg";
-import { ColorContext } from "../../context/ColorContext";
 
-const SocialMedia = () => {
+const SocialMedia = ({ hover }) => {
   const { black } = useContext(ColorContext);
 
   return (
@@ -15,23 +16,32 @@ const SocialMedia = () => {
         <a
           href="#"
           className={
-            black
+            black && !hover
               ? "social__icon social__icon--margin-right"
-              : "social__icon social__icon--margin-right white"
+              : "social__icon social__icon--margin-right color"
           }
         >
           <img className="social__icon-img" src={twitter} alt="twitter" />
         </a>
 
         <div>
-          <a href="#" className={black ? "social__icon" : "social__icon white"}>
+          <a
+            href="#"
+            className={black && !hover ? "social__icon" : "social__icon color"}
+          >
             <img className="social__icon-img" src={fb} alt="fb" />
           </a>
-          <a href="#" className={black ? "social__icon" : "social__icon white"}>
+          <a
+            href="#"
+            className={black && !hover ? "social__icon" : "social__icon color"}
+          >
             <img className="social__icon-img" src={insta} alt="insta" />
           </a>
         </div>
-        <a href="#" className={black ? "social__icon" : "social__icon white"}>
+        <a
+          href="#"
+          className={black && !hover ? "social__icon" : "social__icon color"}
+        >
           <img
             className="social__icon-img social__icon--margin-left"
             src={yt}

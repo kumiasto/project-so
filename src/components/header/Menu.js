@@ -1,19 +1,19 @@
 import React, { useState, useContext, useEffect } from "react";
+
 import { ColorContext } from "../../context/ColorContext";
 import SocialMedia from "../header/SocialMedia";
 import { MdViewHeadline, MdClose } from "react-icons/md";
 import "../../styled/header/menu.scss";
 
-const Menu = () => {
+const Menu = ({ hover, setHover }) => {
   const [open, setOpen] = useState(false);
-  const [hover, setHover] = useState(false);
   const { black } = useContext(ColorContext);
 
   const iconStyle = {
     fontSize: "3rem",
     padding: "1vh",
     zIndex: "100",
-    color: `${open ? "#000" : "#fff"}`,
+    color: "#d4af37",
   };
 
   function handleOpenMenu() {
@@ -35,14 +35,16 @@ const Menu = () => {
       <nav className={`nav ${open ? "nav--visible" : ""}`}>
         <ul className="nav__ul">
           <li>
-            <a className={black ? "nav__a" : "nav__a white"} href="#">
+            <a className={black && !hover ? "nav__a" : "nav__a color"} href="#">
               Nowości
             </a>
           </li>
           <li>
             <a
               className={
-                black ? "nav__a nav__a--arrow" : "nav__a nav__a--arrow white"
+                black && !hover
+                  ? "nav__a nav__a--arrow"
+                  : "nav__a nav__a--arrow color"
               }
               href="#"
               onMouseEnter={toggleHover}
@@ -51,32 +53,32 @@ const Menu = () => {
             </a>
           </li>
           <li>
-            <a className={black ? "nav__a" : "nav__a white"} href="#">
+            <a className={black && !hover ? "nav__a" : "nav__a color"} href="#">
               Trendy
             </a>
           </li>
           <li>
-            <a className={black ? "nav__a" : "nav__a white"} href="#">
+            <a className={black && !hover ? "nav__a" : "nav__a color"} href="#">
               O firmie
             </a>
           </li>
           <li>
-            <a className={black ? "nav__a" : "nav__a white"} href="#">
+            <a className={black && !hover ? "nav__a" : "nav__a color"} href="#">
               Salony
             </a>
           </li>
           <li>
-            <a className={black ? "nav__a" : "nav__a white"} href="#">
+            <a className={black && !hover ? "nav__a" : "nav__a color"} href="#">
               Dystrybutorzy
             </a>
           </li>
           <li>
-            <a className={black ? "nav__a" : "nav__a white"} href="#">
+            <a className={black && !hover ? "nav__a" : "nav__a color"} href="#">
               Kontakt
             </a>
           </li>
         </ul>
-        <SocialMedia />
+        <SocialMedia hover={hover} />
       </nav>
       <div
         className={

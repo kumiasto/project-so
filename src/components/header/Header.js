@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Logo from "./Logo";
 import Menu from "./Menu";
@@ -6,10 +6,12 @@ import Menu from "./Menu";
 import "../../styled/header/header.scss";
 
 const Header = () => {
+  const [hover, setHover] = useState(false);
+
   return (
     <header className="header">
-      <Logo />
-      <Menu />
+      <Logo hover={hover} />
+      <Menu hover={hover} setHover={setHover} />
     </header>
   );
 };

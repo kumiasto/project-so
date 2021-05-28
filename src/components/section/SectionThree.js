@@ -1,6 +1,6 @@
 import React from "react";
-import "../../styled/section/section-three.scss";
 import { MdKeyboardArrowRight as Right } from "react-icons/md";
+import "../../styled/section/section-three.scss";
 
 const SectionThree = () => {
   return (
@@ -11,6 +11,7 @@ const SectionThree = () => {
             KEUNE <br />
             KOLORYZACJA
           </h2>
+
           <div className="section-three__left-content">
             <div className="section-three__left-line"></div>
             <p className="section-three__left-text">ODKRYJ SERIE</p>

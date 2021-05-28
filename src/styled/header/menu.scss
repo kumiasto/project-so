@@ -17,7 +17,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 100;
+  z-index: 99;
 
   @media screen and (min-width: $lg+px) {
     position: static;
@@ -97,7 +97,7 @@
     align-items: center;
     width: 100%;
     height: 50vh;
-    z-index: 1;
+    z-index: 98;
     visibility: hidden;
     opacity: 0;
     background-color: #1b1b1b;
@@ -131,6 +131,13 @@
     }
   }
 }
-.white {
-  color: #fff;
+
+.color {
+  color: #000;
+}
+
+@media screen and (min-width: $lg+px) {
+  .color {
+    color: #fff;
+  }
 }

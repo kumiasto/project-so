@@ -50,6 +50,12 @@
   }
 }
 
-.white {
-  filter: brightness(0) invert(1);
+.color {
+  color: #000;
+}
+
+@media screen and (min-width: $lg+px) {
+  .color {
+    filter: brightness(0) invert(1);
+  }
 }

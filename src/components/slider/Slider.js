@@ -1,12 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
-import img1 from "../../assets/slide1-big.jpg";
-import img2 from "../../assets/slide2-big.jpg";
-import "../../styled/slider/slider.scss";
 import {
   MdKeyboardArrowLeft as Left,
   MdKeyboardArrowRight as Right,
 } from "react-icons/md";
+
 import { ColorContext } from "../../context/ColorContext";
+import img1 from "../../assets/slide1-big.jpg";
+import img2 from "../../assets/slide2-big.jpg";
+import "../../styled/slider/slider.scss";
 
 const Slider = () => {
   const images = [img1, img2];
@@ -44,10 +45,12 @@ const Slider = () => {
       <div className={black ? "slider__img-text" : "slider__img-text white"}>
         <h1 className="slider__header">o.1</h1>
         <p className="slider__paragraph-one">
-          {imageIndex === 0 ? "Bez kompromisu." : "Najlepsze dla Ciebie."}
+          {imageIndex === 0 ? "Bez kompromisu." : "Bez kompromisu."}
         </p>
         <p className="slider__paragraph-two">
-          {imageIndex === 0 ? "Idealnie tak jak lubisz." : "Bez kompromisu."}
+          {imageIndex === 0
+            ? "Idealnie tak jak lubisz."
+            : "Najlepsze dla Ciebie."}
         </p>
         <p className="slider__paragraph-three">
           KEUNE <strong>DESIGN</strong>
