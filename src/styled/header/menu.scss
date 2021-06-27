@@ -1,4 +1,5 @@
 @import "../devices-breakpoints.scss";
+@import "../variable.scss";
 
 .burger {
   padding: 11vh;
@@ -65,7 +66,7 @@
     transition: color 0.3s;
 
     &:hover {
-      color: #d4af37;
+      color: $thirdColor;
     }
 
     &--arrow {
@@ -117,14 +118,14 @@
       flex-direction: column;
       width: 33%;
       height: 50%;
-      color: #d4af37;
+      color: $thirdColor;
       z-index: 5;
       padding: 3vh;
       margin-top: 10vh;
     }
     &-section-one,
     &-section-two {
-      border-right: 1px solid #d4af37;
+      border-right: 1px solid $thirdColor;
     }
     &-section-two {
       color: #fff;

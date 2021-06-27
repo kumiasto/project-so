@@ -6,13 +6,13 @@ import ColorContextProvider from "./context/ColorContext";
 
 const App = () => {
   return (
-    <>
+    <div>
       <ColorContextProvider>
         <Header />
         <Slider />
         <Section />
       </ColorContextProvider>
-    </>
+    </div>
   );
 };
 

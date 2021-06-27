@@ -22,7 +22,14 @@
 }
 
 @mixin sectionLine {
-  width: 40%;
+  width: 30%;
   height: 0;
-  border-top: 1px solid #fff;
+  border-top: 2px solid #fff;
+}
+
+@mixin  headersLeft {
+  position: relative;
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
 }

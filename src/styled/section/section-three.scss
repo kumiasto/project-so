@@ -13,11 +13,20 @@
     padding: 0;
     height: 60vh;
   }
+  &__headers-left {
+    @include headersLeft;
+  }
+  &__headers-right {
+    position: relative;
+    overflow: hidden;
+  }
   &__left-content {
     @include sectionContent;
 
     @media screen and (min-width: $lg+px) {
-      width: 30%;
+      height: 40%;
+      width: 50%;
+      margin-right: 5vh;
     }
   }
   &__right-content {
@@ -25,27 +34,61 @@
   }
 
   &__left {
-    background-image: url("../../assets/04_koloryzacja.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    position: relative;
     width: 100%;
-    height: 35%;
-    margin-bottom: 1vh;
+    height: 100%;
 
     @media screen and (min-width: $lg+px) {
-      border-right: 10px solid white;
-      height: 100%;
-      margin: 0;
+      border-right: 5px solid white;
+      cursor: pointer;
     }
+
+    &-texts {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 70%;
+      height: 100%;
+      overflow: hidden;
+
+      @media screen and (min-width: $lg+px) {
+        height: 12%;
+      }
+    }
+
+    &-text {
+      position: absolute;
+
+      &--top {
+        top: -20px;
+      }
+      &--bottom {
+        bottom: 0;
+      }
+    }
+
     &-header {
       @include sectionHeader;
+      position: absolute;
+      overflow: hidden;
+
+      &--top {
+        top: -180px;
+      }
+      &--bottom {
+        bottom: 0;
+      }
+
       @media screen and (min-width: $lg+px) {
         font-size: 4rem;
+        margin-left: 5vh;
       }
     }
 
     &-wrapper {
       @include sectionWrapper;
+      position: absolute;
+      width: 100%;
 
       @media screen and (min-width: $lg+px) {
         flex-direction: row;
@@ -56,21 +99,52 @@
     &-line {
       @include sectionLine;
     }
+    &-icon {
+      display: flex;
+    }
   }
   &__right {
-    background-image: url("../../assets/05_so_pure.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    position: relative;
     width: 100%;
-    height: 65%;
+    height: 100%;
+
+    &-texts {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 70%;
+      height: 70%;
+      overflow: hidden;
+    }
+
+    &-text {
+      position: absolute;
+
+      &--top {
+        top: -20px;
+      }
+      &--bottom {
+        bottom: 0;
+      }
+    }
 
     @media screen and (min-width: $lg+px) {
       width: 40%;
       height: 100%;
-      background-size: contain;
+      cursor: pointer;
     }
     &-header {
       @include sectionHeader;
+      position: relative;
+
+      &--top {
+        position: absolute;
+        top: -180px;
+      }
+      &--bottom {
+        bottom: 0;
+      }
+
       @media screen and (min-width: $lg+px) {
         font-size: 4rem;
       }
@@ -78,10 +152,23 @@
 
     &-wrapper {
       @include sectionWrapper;
+      position: absolute;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      width: 100%;
+
+      @media screen and (min-width: $lg+px) {
+        margin-left: 5vh;
+        width: 70%;
+      }
     }
     &-line {
       @include sectionLine;
-      width: 50%;
+      width: 40%;
+      @media screen and (min-width: $lg+px) {
+        margin-left: 1vh;
+      }
     }
   }
 }

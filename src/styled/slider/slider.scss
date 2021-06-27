@@ -1,149 +1,156 @@
 @import "../devices-breakpoints.scss";
 
 .slider {
-  width: 100%;
-  height: 100vh;
   position: absolute;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
   top: 0;
-  left: 0;
+  right: 0;
+  display: flex;
+  overflow: hidden;
 
-  &__img-wrapper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    overflow-x: hidden;
+  &__wrapper {
+    width: 100vw;
+    height: auto;
   }
 
   &__img {
+    width: 0%;
     position: absolute;
-    top: 0;
-    left: 0vh;
-    height: 100%;
-    width: 150%;
-    opacity: 0;
-    transition: all 0.5s ease-in;
+    height: 100vh;
 
-    &--active {
-      opacity: 1;
-    }
+    &-text {
+      position: absolute;
+      top: 30%;
+      left: 10%;
+      color: #000;
+      z-index: 39;
 
-    @media screen and (min-width: $lg+px) {
-      width: 100%;
-      height: 100%;
+      @media screen and (min-width: $lg+px) {
+        top: 35%;
+      }
     }
   }
 
-  &__img-text {
-    position: absolute;
-    top: 30%;
-    left: 10%;
-    color: #000;
-    z-index: 39;
-
-    @media screen and (min-width: $lg+px) {
-      top: 35%;
-    }
-  }
   &__header {
     position: relative;
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: 300;
     letter-spacing: 2vh;
     padding: 1vh;
 
     @media screen and (min-width: $lg+px) {
-      font-size: 5rem;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 8%;
-      height: 100%;
-      border: 1px solid #000;
-      opacity: 0.5;
-      transform: rotate(40deg);
+      font-size: 7rem;
     }
   }
-  &__paragraph-one,
-  &__paragraph-two {
-    font-size: 2.5rem;
+
+  &__subheader {
+    position: relative;
+    overflow: hidden;
+    font-size: 3rem;
     font-weight: 300;
-    letter-spacing: 0.1vh;
+    letter-spacing: 0.2;
 
     @media screen and (min-width: $lg+px) {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
-  &__paragraph-three {
-    margin-top: 1vh;
-    letter-spacing: 0.2vh;
-  }
-  &__button-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 10vh;
-  }
-  &__button-line {
-    width: 100%;
-    height: 0;
-    margin-right: 3vh;
-    border-top: 1px solid #000;
-  }
-  &__button {
-    padding: 3vh;
-    border-radius: 50px;
-    border: 1px solid #000;
-    background-color: transparent;
-    cursor: pointer;
-    transition: border 0.3s;
 
-    &:hover {
-      border: 1px solid #d4af37;
+  &__button {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    position: absolute;
+    width: 85%;
+    height: 10%;
+    top: 70%;
+    left: 5vh;
+    z-index: 9;
+    
+    @media screen and (min-width: $lg+px) {
+      width: 30%;
+      height: 20%;
+      left: 20vh;
+    }
+
+    &-line {
+      width: 1%;
+      height: 0;
+      margin-right: 3vh;
+      border-top: 1px solid #000;
+    }
+
+    &-icon {
+      padding: 3vh;
+      border-radius: 50px;
+      border: 1px solid #000;
+      background-color: transparent;
+      cursor: pointer;
     }
   }
 
   &__nav {
     position: absolute;
-    top: 75%;
-    left: 35%;
-    display: flex;
+    top: 65%;
+    left: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     user-select: none;
     color: #000;
+    cursor: pointer;
+    width: 100%;
+    height: 40%;
 
     @media screen and (min-width: $lg+px) {
-      top: 65%;
-      left: 45%;
+      top: 60%;
+      left: 40%;
+      width: 30%;
     }
 
-    &-controls {
+    &-button{
+      position: relative;
       display: flex;
-      justify-content: space-around;
-      align-items: center;
-      width: 10vh;
-      height: 10vh;
-      z-index: 10;
-      width: 20vh;
-      border-bottom: 2px solid #000;
+      flex-direction: column;
+      padding: 1vh;
     }
-    &-circle {
-      width: 1.3vh;
-      height: 1.3vh;
-      border-radius: 50px;
-      color: #fff;
-      background-color: #000;
-      cursor: pointer;
+    &-controls{
+      height: 20%;
+      width: 100%;
 
-      &--active {
-        padding: 1.3vh;
+      &-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+
+        &-circle{
+          height: 12px;
+          width: 12px;
+          border: 2px solid #000;
+          border-radius: 50px;
+        }
+      }
+      &-line{
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+
+        &-circle{
+          width: 10%;
+          height: 3px;
+          opacity: 0;
+          transition: opacity .5s;
+
+          &--active{
+            background-color: #000;
+            opacity: 1;
+          }
+        }
       }
     }
   }
@@ -151,4 +158,12 @@
 
 .white {
   color: #fff;
+}
+
+.active{
+  background-color: #fff;
+
+  &--black{
+    background-color: #000;
+  }
 }
