@@ -1,19 +1,19 @@
-import { useEffect, useRef } from "react";
-import hoverEffect from "hover-effect";
-import { Expo } from "gsap/src/all";
-import gsap from "gsap";
-import { MdKeyboardArrowRight as Right } from "react-icons/md";
+import { useEffect, useRef } from 'react';
+import hoverEffect from 'hover-effect';
+import { Expo } from 'gsap/src/all';
+import gsap from 'gsap';
+import { MdKeyboardArrowRight as Right } from 'react-icons/md';
 
-import leftOne from "../../assets/04_koloryzacja.jpg";
-import leftTwo from "../../assets/04_hover_koloryzacja.jpg";
-import rightOne from "../../assets/05_so_pure.jpg";
-import rightTwo from "../../assets/05_hover_so_pure.jpg";
-import bgc from "../../assets/heightMap.png";
-import "../../styled/section/section-three.scss";
+import leftOne from '../../assets/04_koloryzacja.webp';
+import leftTwo from '../../assets/04_hover_koloryzacja.webp';
+import rightOne from '../../assets/05_so_pure.webp';
+import rightTwo from '../../assets/05_hover_so_pure.webp';
+import bgc from '../../assets/heightMap.png';
+import '../../styled/section/section-three.scss';
 
 const SectionThree = () => {
   const hoverSpeed = 1.1;
-  
+
   const imgLeftRef = useRef();
   const headerLeftRef = useRef();
   const textLeftRef = useRef();
@@ -60,10 +60,10 @@ const SectionThree = () => {
       gsap.to(iconLeftRef.current, 0.4, { x: 25, delay: 0.1 });
     }
 
-    imgLeftRef.current.addEventListener("mouseenter", handleMouseEnter);
+    imgLeftRef.current.addEventListener('mouseenter', handleMouseEnter);
 
     return () =>
-      imgLeftRef?.current.removeEventListener("mouseenter", handleMouseEnter);
+      imgLeftRef?.current.removeEventListener('mouseenter', handleMouseEnter);
   }, []);
 
   useEffect(() => {
@@ -77,10 +77,10 @@ const SectionThree = () => {
       gsap.to(textBottom, 0.6, { y: 0 });
       gsap.to(iconLeftRef.current, 0.4, { x: 0 });
     }
-    imgLeftRef.current.addEventListener("mouseleave", handleMouseLeave);
+    imgLeftRef.current.addEventListener('mouseleave', handleMouseLeave);
 
     return () =>
-      imgLeftRef?.current.removeEventListener("mouseenter", handleMouseLeave);
+      imgLeftRef?.current.removeEventListener('mouseenter', handleMouseLeave);
   }, []);
 
   useEffect(() => {
@@ -95,10 +95,10 @@ const SectionThree = () => {
       gsap.to(iconRightRef.current, 0.4, { x: 25, delay: 0.1 });
     }
 
-    imgRightRef.current.addEventListener("mouseenter", handleMouseEnter);
+    imgRightRef.current.addEventListener('mouseenter', handleMouseEnter);
 
     return () =>
-      imgRightRef?.current.removeEventListener("mouseenter", handleMouseEnter);
+      imgRightRef?.current.removeEventListener('mouseenter', handleMouseEnter);
   }, []);
 
   useEffect(() => {
@@ -112,66 +112,66 @@ const SectionThree = () => {
       gsap.to(textBottom, 0.6, { y: 0 });
       gsap.to(iconRightRef.current, 0.4, { x: 0 });
     }
-    imgRightRef.current.addEventListener("mouseleave", handleMouseLeave);
+    imgRightRef.current.addEventListener('mouseleave', handleMouseLeave);
 
     return () =>
-      imgRightRef?.current.removeEventListener("mouseenter", handleMouseLeave);
+      imgRightRef?.current.removeEventListener('mouseenter', handleMouseLeave);
   }, []);
 
   return (
-    <section className="section-three">
-      <div ref={imgLeftRef} className="section-three__left">
-        <div className="section-three__left-wrapper">
-          <div ref={headerLeftRef} className="section-three__headers-left">
-            <h2 className="section-three__left-header section-three__left-header--top">
+    <section className='section-three'>
+      <div ref={imgLeftRef} className='section-three__left'>
+        <div className='section-three__left-wrapper'>
+          <div ref={headerLeftRef} className='section-three__headers-left'>
+            <h2 className='section-three__left-header section-three__left-header--top'>
               KEUNE <br />
               KOLORYZACJA
             </h2>
-            <h2 className="section-three__left-header section-three__left-header--bottom">
+            <h2 className='section-three__left-header section-three__left-header--bottom'>
               KEUNE <br />
               KOLORYZACJA
             </h2>
           </div>
-          <div className="section-three__left-content">
-            <div className="section-three__left-line"></div>
-            <div ref={textLeftRef} className="section-three__left-texts">
-              <p className="section-three__left-text section-three__left-text--top ">
+          <div className='section-three__left-content'>
+            <div className='section-three__left-line'></div>
+            <div ref={textLeftRef} className='section-three__left-texts'>
+              <p className='section-three__left-text section-three__left-text--top '>
                 ODKRYJ SERIE
               </p>
-              <p className="section-three__left-text section-three__left-text--bottom">
+              <p className='section-three__left-text section-three__left-text--bottom'>
                 ODKRYJ SERIE
               </p>
             </div>
-            <div ref={iconLeftRef} className="section-three__left-icon">
-              <Right style={{ fontSize: "1.5rem" }} />
+            <div ref={iconLeftRef} className='section-three__left-icon'>
+              <Right style={{ fontSize: '1.5rem' }} />
             </div>
           </div>
         </div>
       </div>
-      <div ref={imgRightRef} className="section-three__right">
-        <div className="section-three__right-wrapper">
-          <div ref={headerRightRef} className="section-three__headers-right">
-            <h2 className="section-three__right-header section-three__right-header--top">
+      <div ref={imgRightRef} className='section-three__right'>
+        <div className='section-three__right-wrapper'>
+          <div ref={headerRightRef} className='section-three__headers-right'>
+            <h2 className='section-three__right-header section-three__right-header--top'>
               KEUNE <br />
               SO PURE
             </h2>
-            <h2 className="section-three__right-header section-three__right-header--bottom">
+            <h2 className='section-three__right-header section-three__right-header--bottom'>
               KEUNE <br />
               SO PURE
             </h2>
           </div>
-          <div className="section-three__right-content">
-            <div className="section-three__right-line"></div>
-            <div ref={textRightRef} className="section-three__right-texts">
-              <p className="section-three__right-text section-three__right-text--top">
+          <div className='section-three__right-content'>
+            <div className='section-three__right-line'></div>
+            <div ref={textRightRef} className='section-three__right-texts'>
+              <p className='section-three__right-text section-three__right-text--top'>
                 ODKRYJ SERIE
               </p>
-              <p className="section-three__right-text section-three__right-text--bottom">
+              <p className='section-three__right-text section-three__right-text--bottom'>
                 ODKRYJ SERIE
               </p>
             </div>
-            <div ref={iconRightRef} className="section-three__right-icon">
-              <Right style={{ fontSize: "1.5rem" }} />
+            <div ref={iconRightRef} className='section-three__right-icon'>
+              <Right style={{ fontSize: '1.5rem' }} />
             </div>
           </div>
         </div>
