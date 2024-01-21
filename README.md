@@ -1,6 +1,6 @@
 ## Slider in react
 
-### [Live preview](https://pensive-euclid-3633a4.netlify.app/)
+### [Live preview](https://kumiasto.github.io/slider-react-gsap/)
 
 ### Technologies used:
 * react
