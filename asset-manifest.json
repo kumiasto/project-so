@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/slider-react-gsap/static/css/main.8c8780e2.chunk.css",
+    "main.js": "/slider-react-gsap/static/js/main.5d463578.chunk.js",
+    "main.js.map": "/slider-react-gsap/static/js/main.5d463578.chunk.js.map",
+    "runtime-main.js": "/slider-react-gsap/static/js/runtime-main.248ac90f.js",
+    "runtime-main.js.map": "/slider-react-gsap/static/js/runtime-main.248ac90f.js.map",
+    "static/js/2.6aec83d3.chunk.js": "/slider-react-gsap/static/js/2.6aec83d3.chunk.js",
+    "static/js/2.6aec83d3.chunk.js.map": "/slider-react-gsap/static/js/2.6aec83d3.chunk.js.map",
+    "index.html": "/slider-react-gsap/index.html",
+    "static/css/main.8c8780e2.chunk.css.map": "/slider-react-gsap/static/css/main.8c8780e2.chunk.css.map",
+    "static/js/2.6aec83d3.chunk.js.LICENSE.txt": "/slider-react-gsap/static/js/2.6aec83d3.chunk.js.LICENSE.txt",
+    "static/media/01_care.3bfb3583.webp": "/slider-react-gsap/static/media/01_care.3bfb3583.webp",
+    "static/media/01_hover_care.f84912ef.webp": "/slider-react-gsap/static/media/01_hover_care.f84912ef.webp",
+    "static/media/02_design.152378f9.webp": "/slider-react-gsap/static/media/02_design.152378f9.webp",
+    "static/media/02_hover_style.f12de049.webp": "/slider-react-gsap/static/media/02_hover_style.f12de049.webp",
+    "static/media/03_blend_1.e37935b1.webp": "/slider-react-gsap/static/media/03_blend_1.e37935b1.webp",
+    "static/media/03_hover_blend.bfcbe3dd.webp": "/slider-react-gsap/static/media/03_hover_blend.bfcbe3dd.webp",
+    "static/media/04_hover_koloryzacja.2e4af0c0.webp": "/slider-react-gsap/static/media/04_hover_koloryzacja.2e4af0c0.webp",
+    "static/media/04_koloryzacja.5ea65bf8.webp": "/slider-react-gsap/static/media/04_koloryzacja.5ea65bf8.webp",
+    "static/media/05_hover_so_pure.0764df9b.webp": "/slider-react-gsap/static/media/05_hover_so_pure.0764df9b.webp",
+    "static/media/05_so_pure.0bac3f44.webp": "/slider-react-gsap/static/media/05_so_pure.0bac3f44.webp",
+    "static/media/fb.505fed90.svg": "/slider-react-gsap/static/media/fb.505fed90.svg",
+    "static/media/heightMap.1ded8f85.png": "/slider-react-gsap/static/media/heightMap.1ded8f85.png",
+    "static/media/img1.290ef3b7.webp": "/slider-react-gsap/static/media/img1.290ef3b7.webp",
+    "static/media/img2.ecb7814e.webp": "/slider-react-gsap/static/media/img2.ecb7814e.webp",
+    "static/media/img3.b4689aa1.webp": "/slider-react-gsap/static/media/img3.b4689aa1.webp",
+    "static/media/img4.b5edc733.webp": "/slider-react-gsap/static/media/img4.b5edc733.webp",
+    "static/media/insta.8f1ab155.svg": "/slider-react-gsap/static/media/insta.8f1ab155.svg",
+    "static/media/logo_KEUNE.85184957.svg": "/slider-react-gsap/static/media/logo_KEUNE.85184957.svg",
+    "static/media/twitter.48f6b106.svg": "/slider-react-gsap/static/media/twitter.48f6b106.svg",
+    "static/media/yt.5831bc0f.svg": "/slider-react-gsap/static/media/yt.5831bc0f.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.248ac90f.js",
+    "static/js/2.6aec83d3.chunk.js",
+    "static/css/main.8c8780e2.chunk.css",
+    "static/js/main.5d463578.chunk.js"
+  ]
+}
